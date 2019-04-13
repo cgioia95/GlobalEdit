@@ -43,27 +43,28 @@ public class GlobalEditDistance {
 	
   
 		
-		
-
-	
 	
 	public static void main(String[] args) throws IOException {
 		
-		FileWriter writer = new FileWriter("C:\\Users\\Marina Office\\Google Drive\\UNI\\Knowledge Technologies\\Project 1\\2019S1-proj1-data\\res.csv");
+		FileWriter writer = new FileWriter("C:\\Users\\chris\\Google Drive\\UNI\\Knowledge Technologies\\"
+				+ "Project 1\\2019S1-proj1-data\\Global Distance\\resFinal.csv");
 		
 		writer.append("Mispelt,Predicted,Correct");
 		writer.append("\n");
 		
 		// Constructed an array list of our dictionary words
-		Dictionary dict = new Dictionary("C:\\Users\\Marina Office\\Google Drive\\UNI\\Knowledge Technologies\\Project 1\\2019S1-proj1-data\\dict.txt");
+		Dictionary dict = new Dictionary("C:\\Users\\chris\\Google Drive\\UNI\\Knowledge Technologies\\"
+				+ "Project 1\\2019S1-proj1-data\\dict.txt");
 		
 		System.out.println(dict.words.size());
 		
-		Dictionary misspell = new Dictionary("C:\\Users\\Marina Office\\Google Drive\\UNI\\Knowledge Technologies\\Project 1\\2019S1-proj1-data\\misspell.txt");
+		Dictionary misspell = new Dictionary("C:\\Users\\chris\\Google Drive\\UNI\\Knowledge "
+				+ "Technologies\\Project 1\\2019S1-proj1-data\\misspell.txt");
 
 		System.out.println(misspell.words.size());
 
-		Dictionary correct = new Dictionary("C:\\Users\\Marina Office\\Google Drive\\UNI\\Knowledge Technologies\\Project 1\\2019S1-proj1-data\\correct.txt");
+		Dictionary correct = new Dictionary("C:\\Users\\chris\\Google Drive\\UNI\\Knowledge"
+				+ " Technologies\\Project 1\\2019S1-proj1-data\\correct.txt");
 		
 		System.out.println(correct.words.size());
 		
@@ -109,18 +110,20 @@ public class GlobalEditDistance {
 				Collections.sort(candidates);
 				
 				finalAnswer = candidates.get(0).word;
-				writer.append(finalAnswer + ",");
-						
+				writer.append(finalAnswer +",");
+
 			}
 			
 			else {
-				writer.append("NONE_FOUND");
+				finalAnswer = mispeltWord;
+				writer.append(finalAnswer + ",");
+
 			}
 			
+			System.out.println(i+1);
 			
-				System.out.println(i+1);
-				writer.append(correctWord + ",");
-				writer.append("\n");
+			writer.append(correctWord + "\n");
+
 				
 			}
 			
