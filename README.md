@@ -1,4 +1,4 @@
-# GlobalEdit
+# GlobalEdit Spellchecker
 
 GlobalEdit distance powered spellchecker, produces a CSV to assess accuracy. 
 
